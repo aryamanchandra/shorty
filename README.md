@@ -1,2 +1,2 @@
 ### Shorty
-Link Shortner
+Link Shortner using vercel and airtable.
