@@ -1,5 +1,5 @@
 const express = require('express')
-const fetch = require('node-fetch')
+const axios = require('axios')
 
 const app = express()
 const { getTarget } = require('./lib/airtable')
@@ -16,7 +16,7 @@ app.get('/gh/:repo', async (req, res) => {
   try {
     const { repo } = req.params
 
-    const { ok: repoExists } = await fetch(
+    const { ok: repoExists } = await axios.get(
       `https://api.github.com/repos/aryamanchandra/${repo}`
     )
 
