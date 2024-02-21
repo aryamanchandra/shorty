@@ -12,7 +12,6 @@ app.get('/', async (req, res) => {
   }
 })
 
-// GitHub projects
 app.get('/gh/:repo', async (req, res) => {
   try {
     const { repo } = req.params
